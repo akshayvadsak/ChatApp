@@ -1,0 +1,801 @@
+//
+// Theme style
+//
+
+// Mode
+$mode: default;
+
+// Initialize
+@import 'init';
+
+// Components
+@import './core/components/components';
+@import 'components/components';
+
+// Layout
+@import 'layout/layout';
+@import './core/layout/docs/layout';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.UserImage {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .DotOnline {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    background: green;
+    border-radius: 100%;
+    position: absolute;
+    right: -10px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+  }
+
+  .DotOffline {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    background: gray;
+    border-radius: 100%;
+    position: absolute;
+    right: -10px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+  }
+}
+
+.Male_female span:last-child {
+  font-weight: 600;
+  color: #a9a9a9;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.UserName h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.MissingField {
+  border-color: red;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: thin;
+}
+
+.AllPrivateImages {
+  display: flex;
+  grid-gap: 15px;
+  gap: 15px;
+  flex-flow: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.PrivateImages {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ProfileImage {
+  cursor: pointer;
+
+  img {
+    width: 110px;
+    border-radius: 5px;
+    height: 110px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.ScrollsPrivateImages {
+  overflow: auto;
+  height: 300px;
+}
+
+.withName {
+  .PrivateImages {
+    height: auto;
+
+    .imgBox {
+      width: 80px;
+      height: 80px;
+      position: relative;
+    }
+
+    .nameDetails {
+      text-align: center;
+      padding: 5px 0;
+
+      h6 {
+        font-size: 12px;
+        margin: 0;
+        font-weight: normal;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+    }
+  }
+}
+
+
+.GreyOut {
+  pointer-events: none;
+  filter: grayscale(5);
+}
+
+.MeatsBox {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.hight-125 {
+  height: 100px !important;
+}
+
+.align-middle td {
+  vertical-align: middle;
+}
+
+img.PushImageIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.DropFile-block {
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border: 1px dashed #009EF7;
+    border-radius: 5px;
+    background: #F1FAFF;
+
+    i {
+      margin-right: 20px;
+    }
+  }
+}
+
+
+.Tags-Info {
+  display: flex;
+  align-items: center;
+
+  .tags-filter {
+    min-width: fit-content;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+
+    i {
+      margin-right: 5px;
+    }
+
+    &:after {
+      display: none !important;
+    }
+  }
+}
+
+
+.react-tag-input {
+  background-color: #f5f8fa;
+  border-color: #f5f8fa;
+  color: #5e6278;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  height: 45px;
+}
+
+.ChatScrolling {
+  padding: 10px 5px;
+  background: #f5f8fa;
+  margin: 0 -15px 5px;
+  position: sticky;
+  top: 55px;
+  z-index: 99;
+  height: 60px;
+}
+
+.Scrolling-Top {
+  padding-top: 115px !important;
+  margin-top: -115px;
+}
+
+.CustomScrolling {
+
+  a {
+    width: 22%;
+    padding: 10px !important;
+  }
+}
+
+.FilterBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 12px;
+    margin-right: 5px;
+    transition: all 0.15s ease-in-out;
+  }
+}
+
+.btn-disabled {
+  background: #4d4d4d !important;
+}
+
+#Filter-collapse {
+  padding: 0 15px;
+  background: #f5f8fa;
+  margin: 0 2.25rem;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #e4e6ef;
+
+  .common-col {
+    padding: 0 5px;
+  }
+
+  select {
+    font-size: 12px;
+    height: 34px;
+    padding: 0 10px;
+    background-position: right 0.7rem center;
+    background-size: 12px 12px;
+
+    option {
+      color: #181c32;
+    }
+  }
+
+  select:invalid {
+    color: #a1a5b9;
+  }
+
+  input {
+    font-size: 12px;
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  button {
+    width: 100%;
+    height: 34px;
+  }
+}
+
+.user-list-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f5f8fa;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+  .list-profile {
+    display: flex;
+    align-items: center;
+
+    .user-img {
+      width: 50px;
+      min-width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .UserName {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}
+
+.message-text {
+  color: gray
+}
+
+.customrounds {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.ghm {
+  button {
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+}
+
+
+.customspiner {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 44%);
+}
+
+.LikeBtn {
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: unset;
+    border-radius: 30px;
+    font-size: 14px;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.InnerPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  .IconPart {
+    i {
+      color: #f1416c;
+    }
+  }
+
+  .BtnGroupInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+.Tag-badge {
+  padding: 3px 8px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  color: #181c32 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  font-size: 12px;
+
+  &.newMessage {
+    color: #F35674 !important;
+    background: #FEF6F8;
+  }
+
+  &.loggedOut {
+    color: #F9D367 !important;
+    background: #FEF8DE;
+  }
+
+  &.loggedIn {
+    color: #59E19D !important;
+    background: #DFFCEC;
+  }
+
+  &.newUser {
+    color: #62B8F4 !important;
+    background: #F1FAFF;
+  }
+
+  &.likedProfile {
+    color: #FB49EF !important;
+    background: #FEC5FA;
+  }
+}
+
+.date-overview {
+  width: 100%;
+  max-width: 200px;
+}
+
+.count-card {
+  padding: 25px;
+  background: linear-gradient(90deg, rgb(30 30 45) 0%, rgb(237 23 93) 100%);
+  border-radius: 5px;
+
+  h6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ed175e;
+  }
+}
+
+.rightFit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+
+  .onlineStatus {
+    margin-right: 5px;
+  }
+}
+
+.giphDrawer {
+  .css-k9d86b-MuiPaper-root-MuiDrawer-paper {
+    width: 838px;
+
+    .closebtn {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        font-size: 20px;
+        border: none;
+        color: #ffc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, #9933FF 0%, #FF6666 100%);
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.adminFeed-filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media (max-width: 767.98px) {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .form-select {
+    min-width: 200px;
+    padding: 12px 15px;
+
+    @media (max-width: 767.98px) {
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+}
+
+// admin feed on mobile 
+
+
+.AdminFeed-container {
+
+  .AdminFeed-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+
+    p {
+      color: #a1a5b7;
+      margin: 0;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .Profile-info {
+      width: calc(50% - 5px);
+      display: flex;
+      gap: 10px;
+
+      .profileThumbnail {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .Thumbnail-details {
+        width: calc(100% - 60px);
+
+        h3,
+        p {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .Profileselection-info {
+      width: 100%;
+
+      .Thumbnail-details {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .infoInner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 0;
+      border-top: 1px solid #eee;
+    }
+
+    .infoBtns {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+
+      button {
+        width: 50%;
+      }
+    }
+  }
+
+  .userProfile-grid {
+    .infoInner {
+      &:first-child {
+        border: 0;
+      }
+    }
+  }
+}
+
+// admin feed on mobile end
+
+
+@media only screen and (max-width : 768px) {
+  .PrivateImages {
+    width: 60px;
+    height: 60px;
+  }
+
+  .AllPrivateImages {
+    gap: 8px;
+
+    .spinnerLoder {
+      display: flex;
+      justify-content: center;
+      height: calc(100vh - 70px);
+      position: absolute;
+      width: 100%;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 850px) {
+  .PrivateImages {
+    width: 73px;
+    height: 73px;
+  }
+
+  .customP {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .custom-card-header,
+  .custom-card-body {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+
+
+
+// resize panel 
+
+.chatPanelBox {
+  min-height: 260px;
+  max-height: 100% !important;
+}
+
+.chatOverview {
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.chatContainer {
+  flex-grow: 3;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: column;
+}
+
+.chatPanel {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.chat-textBox {
+  flex-grow: 2;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.chatContainer .ResizePanel-module_ResizeContentVertical__1OGHY {
+  margin-bottom: 15px;
+}
+
+.chatContainer .ResizePanel-module_ResizeBarVertical__2LUZV {
+  height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.chatContainer .ResizePanel-module_ResizeHandleVertical__I0jId {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background: #009ef7;
+  border: 0;
+}
+
+.chatContainer .ResizePanel-module_ResizeHandleVertical__I0jId>span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  margin: 0;
+}
+
+.chatContainer .ResizePanel-module_ResizeHandleVertical__I0jId>span::after {
+  content: 'Resize';
+  font-size: 10px;
+  color: #fff;
+}
+
+// .MuiDataGrid-cellContent {
+//   font-weight: 800;
+// }
+.DashboardTable {
+  .MuiDataGrid-columnHeaderTitle {
+    font-size: 15px;
+    color: #000;
+  }
+
+  .recepientvalues p {
+    margin: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  .recepientrow {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MuiDataGrid-cellContent {
+    font-size: 14px;
+    color: #000;
+    text-transform: capitalize;
+  }
+
+  .MuiDataGrid-root {
+    border: none;
+  }
+
+  .UuerlocationStyle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+
+  .MuiDataGrid-footerContainer {
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+
+  .MuiDataGrid-columnHeaderTitleContainer {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
